@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import logoIco from "@/public/kolir_art_logo.jpg";
 import fbLogo from "@/public/facebook_logo.png";
@@ -12,30 +13,54 @@ export default function Header() {
     { name: "Контакти", pagePart: "Contacts" },
   ];
 
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+
+  const changeShowBurger = () => {
+    setShowBurgerMenu(!showBurgerMenu);
+    console.log(showBurgerMenu);
+  };
+
   return (
     <div className="header">
       <div className="headerLogo">
         <Image src={logoIco} alt="kolir art logo" />
       </div>
-      <div className="headerNavBar">
-        {headerList.map((item, index) => {
-          return (
-            <div key={index}>
-              <a href={item.pagePart}>{item.name}</a>
-            </div>
-          );
-        })}
-      </div>
-      <div className="social">
-        <a
-          href="https://www.facebook.com/profile.php?id=100068535566999"
-          target="_blank"
+      <div>
+        <div
+          className={`${
+            showBurgerMenu
+              ? "showNavBarBurger active headerNavBar"
+              : "showNavBarBurger headerNavBar"
+          }`}
         >
-          <Image src={fbLogo} alt="facebook logo"></Image>
-        </a>
-        <a href="https://instagram.com/kolir.art" target="_blank">
-          <Image src={instaLogo} alt="instagram logo"></Image>
-        </a>
+          {headerList.map((item) => {
+            return (
+              <div>
+                <a href={item.pagePart}>{item.name}</a>
+              </div>
+            );
+          })}
+          <div className={`${showBurgerMenu ? "social active" : "social"}`}>
+            <a
+              href="https://www.facebook.com/profile.php?id=100068535566999"
+              target="_blank"
+            >
+              <Image className="socialIcon" src={fbLogo} alt="facebook logo"></Image>
+            </a>
+            <a href="https://instagram.com/kolir.art" target="_blank">
+              <Image className="socialIcon" src={instaLogo} alt="instagram logo"></Image>
+            </a>
+          </div>
+        </div>
+
+        <div
+          className={`${
+            showBurgerMenu ? "main-nav__burger active" : "main-nav__burger"
+          }`}
+          onClick={() => changeShowBurger()}
+        >
+          <span></span>
+        </div>
       </div>
     </div>
   );
