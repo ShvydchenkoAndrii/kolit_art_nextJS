@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&family=Rubik+Glitch&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: #dddddd;
+}
+
+.header {
+  background-color: rgb(247, 108, 7);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Rubik Burned', cursive;
+
+}
+
+.headerLogo {
+  width: 180px;
+}
+
+.headerNavBar {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 100px;
+  font-size: 26px;
+}
+
+.social {
+  display: flex;
+  gap: 25px;
+}
