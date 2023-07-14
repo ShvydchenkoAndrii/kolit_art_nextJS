@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Kolir.Art Studio',
   description: '',
+  
 };
 
 export default function RootLayout({ children }) {
