@@ -18,9 +18,9 @@ export default function Header() {
         <Image src={logoIco} alt="kolir art logo" />
       </div>
       <div className="headerNavBar">
-        {headerList.map((item) => {
+        {headerList.map((item, index) => {
           return (
-            <div>
+            <div key={index}>
               <a href={item.pagePart}>{item.name}</a>
             </div>
           );
