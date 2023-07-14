@@ -33,9 +33,9 @@ export default function Header() {
               : "showNavBarBurger headerNavBar"
           }`}
         >
-          {headerList.map((item) => {
+          {headerList.map((item, index) => {
             return (
-              <div>
+              <div key={index}>
                 <a href={item.pagePart}>{item.name}</a>
               </div>
             );
@@ -45,10 +45,18 @@ export default function Header() {
               href="https://www.facebook.com/profile.php?id=100068535566999"
               target="_blank"
             >
-              <Image className="socialIcon" src={fbLogo} alt="facebook logo"></Image>
+              <Image
+                className="socialIcon"
+                src={fbLogo}
+                alt="facebook logo"
+              ></Image>
             </a>
             <a href="https://instagram.com/kolir.art" target="_blank">
-              <Image className="socialIcon" src={instaLogo} alt="instagram logo"></Image>
+              <Image
+                className="socialIcon"
+                src={instaLogo}
+                alt="instagram logo"
+              ></Image>
             </a>
           </div>
         </div>
