@@ -4,6 +4,7 @@ import Image from "next/image";
 import logoIco from "@/public/kolir_art_logo_header.jpg";
 import fbLogo from "@/public/facebook_logo.png";
 import instaLogo from "@/public/instagram_logo.png";
+import styles from "@/app/components/Header/header.css";
 
 export default function Header() {
   const headerList = [

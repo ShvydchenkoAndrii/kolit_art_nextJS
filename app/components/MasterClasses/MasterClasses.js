@@ -5,6 +5,7 @@ import mcItem3 from "@/public/individual2.jpg";
 import mcItem4 from "@/public/planner.JPG";
 import mcItem5 from "@/public/sertificate.JPG";
 import mcItem6 from "@/public/prices.JPG";
+import styles from "@/app/components/MasterClasses/masterClasses.css";
 
 export default function MasterClasses() {
   const masterClasses = [
@@ -21,7 +22,7 @@ export default function MasterClasses() {
       <div>
         <h2>Майстер-класи</h2>
       </div>
-      <div>
+      <div className="mc-list">
         {masterClasses.map((item, index) => {
           return (
             <div className="mc-item" key={index}>

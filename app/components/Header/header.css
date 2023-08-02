@@ -1,0 +1,153 @@
+.header {
+    width: 100%;
+    background-color: rgb(247, 108, 7);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    font-family: "Rubik Burned", cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .headerLogo {
+    display: block;
+    width: 100px;
+  }
+  
+  .headerNavBar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 85px;
+    font-size: 22px;
+  }
+  
+  .main-nav__burger {
+    cursor: pointer;
+    display: none;
+    height: 20px;
+    padding: 12px;
+    position: absolute;
+    width: 30px;
+    right: 40px;
+    top: 37%;
+  }
+  .main-nav__burger span,
+  .main-nav__burger::before,
+  .main-nav__burger::after {
+    background-color: white;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .active section div nav .main-nav__burger span {
+    transform: scale(1);
+  }
+  
+  .main-nav__burger::before,
+  .main-nav__burger::after {
+    content: " ";
+  }
+  
+  .main-nav__burger::before {
+    top: 0;
+  }
+  
+  .main-nav__burger::after {
+    bottom: 0;
+  }
+  
+  .main-nav__burger.active span {
+    transform: scale(0);
+  }
+  
+  .main-nav__burger.active::before {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+  
+  .main-nav__burger.active::after {
+    bottom: 40%;
+    transform: rotate(45deg);
+  }
+  
+  .social {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 20%;
+    border-color: #dddddd;
+    border-width: 2px;
+    background-color: rgb(247, 108, 7);
+  }
+  
+  @media (max-width: 1200px) {
+    .showNavBarBurger {
+      background-color: #dddddd;
+      height: 100%;
+      left: 0;
+      margin: auto;
+      overflow: hidden;
+      padding: 70px 24px 50px 24px;
+      position: fixed;
+      transition: top 0.2s ease-in 0.1s;
+      top: -100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      z-index: 5;
+    }
+  
+    .headerNavBar {
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .showNavBarBurger.active {
+      top: 0;
+    }
+  
+    .social {
+      display: none;
+    }
+  
+    .social.active {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+  
+    .main-nav__burger {
+      display: block;
+      position: absolute;
+      z-index: 10;
+    }
+  }
+  
+  @media (min-width: 481px) {
+    .headerLogo {
+      display: block;
+      width: 130px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .headerLogo {
+      display: block;
+      width: 160px;
+    }
+  }

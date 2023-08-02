@@ -3,20 +3,6 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&family=Rubik+Glitch&display=swap");
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   background-color: #dddddd;
   margin: auto;
@@ -25,346 +11,55 @@ body {
 h1 {
   margin-top: 100px;
   margin-bottom: 50px;
-  font-size: 60px;
+  font-size: 40px;
   font-family: "Franklin", "Arial Narrow", Arial, sans-serif;
   font-weight: 500;
   color: rgb(247, 108, 7);
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 35px;
   margin-top: 70px;
   margin-bottom: 70px;
   font-family: "Rubik Burned", cursive;
   color: white;
 }
 
-/* ---------- Start of header CSS ---------- */
-
-.header {
-  width: 100%;
-  background-color: rgb(247, 108, 7);
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  justify-items: center;
-  align-items: center;
-  font-family: "Rubik Burned", cursive;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.headerLogo {
-  display: block;
-  width: 180px;
-}
-
-.headerNavBar {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  gap: 100px;
-  font-size: 22px;
-}
-
-.main-nav__burger {
-  cursor: pointer;
-  display: none;
-  height: 20px;
-  padding: 12px;
-  position: absolute;
-  width: 30px;
-  right: 50px;
-}
-.main-nav__burger span,
-.main-nav__burger::before,
-.main-nav__burger::after {
-  background-color: white;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-}
-
-.active section div nav .main-nav__burger span {
-  transform: scale(1);
-}
-
-.main-nav__burger::before,
-.main-nav__burger::after {
-  content: " ";
-}
-
-.main-nav__burger::before {
-  top: 0;
-}
-
-.main-nav__burger::after {
-  bottom: 0;
-}
-
-.main-nav__burger.active span {
-  transform: scale(0);
-}
-
-.main-nav__burger.active::before {
-  transform: rotate(-45deg);
-  top: 50%;
-}
-
-.main-nav__burger.active::after {
-  bottom: 40%;
-  transform: rotate(45deg);
-}
-
-.social {
-  display: flex;
-  gap: 20px;
-}
-
-.socialIcon {
-  width: 40px;
-  height: 40px;
-  padding: 4px;
-  border-radius: 20%;
-  border-color: #dddddd;
-  border-width: 2px;
-  background-color: rgb(247, 108, 7);
-}
-
-@media (max-width: 1200px) {
-  .showNavBarBurger {
-    background-color: #dddddd;
-    height: 100%;
-    left: 0;
-    margin: auto;
-    overflow: hidden;
-    padding: 100px 24px 50px 24px;
-    position: fixed;
-    transition: top 0.2s ease-in 0.1s;
-    top: -100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 5;
-  }
-
-  .headerNavBar {
-    color: white;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .showNavBarBurger.active {
-    top: 0;
-  }
-
-  .social {
-    display: none;
-  }
-
-  .social.active {
-    display: flex;
-    gap: 40px;
-  }
-
-  .main-nav__burger {
-    display: block;
-    position: absolute;
-    z-index: 10;
-  }
-}
-
-/* ---------- End of header CSS ---------- */
-
-/* ---------- Start of Naming CSS ---------- */
-
-.naming {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 200px;
-}
-
-.nameDescr {
-  margin-bottom: 100px;
-  font-size: 25px;
-  font-family: "Rubik Burned", cursive;
-  color: rgb(247, 108, 7);
-}
-
-/* ---------- End of Naming CSS ---------- */
-
-/* ---------- Start of AboutUs CSS ---------- */
-
-.descrImg {
-  width: 70px;
-}
-
-.aboutUs {
-  background-color: rgb(247, 108, 7);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 50px;
-}
-
-.aboutUsDescr {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  justify-content: center;
-  align-items: center;
-  margin: 25px;
-}
-
-.textDescr {
-  font-size: 24px;
-  color: white;
-}
-
-/* ---------- End of AboutUs CSS ---------- */
-
-/* ---------- Start of MasterClasses CSS ---------- */
-
-.mc-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-.mc-item {
-  position: relative;
-  width: 350px;
-  height: 500px;
-  overflow: hidden;
-}
-
-.mc-item-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.mc-desc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 23px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.1s, opacity 0.1s;
-}
-
-.mc-item:hover .mc-desc {
-  visibility: visible;
-  transition: 0.5s;
-  opacity: 1;
-}
-
 @media (min-width: 481px) {
-  .mc-desc {
-    visibility: inherit;
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
   }
 }
 
 @media (min-width: 769px) {
-}
-
-@media (min-width: 1025px) {
-}
-
-@media (min-width: 1200px) {
-}
-
-/* ---------- End of MasterClasses CSS ---------- */
-
-/* ---------- Start of Contacts CSS ---------- */
-
-.contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-.contactsContent {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-left: 10px;
-}
-
-.location {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  gap: 5px;
-}
-
-.contactsInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 50px;
-  color: black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.contactsSocial {
-  display: flex;
-  gap: 20px;
-}
-
-iframe {
-  width: 250px;
-  height: 300px;
-}
-
-@media (min-width: 481px) {
-  iframe {
-    width: 400px;
-    height: 400px;
+  h1 {
+    font-size: 60px;
   }
-}
-
-@media (min-width: 769px) {
-  iframe {
-    width: 500px;
-    height: 400px;
+  h2 {
+    font-size: 45px;
   }
 }
 
 @media (min-width: 1025px) {
-  .contactsContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 55px;
   }
 }
 
 @media (min-width: 1200px) {
-  iframe {
-    width: 600px;
-    height: 400px;
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 65px;
   }
 }
-
-/* ---------- End of Contacts CSS ---------- */

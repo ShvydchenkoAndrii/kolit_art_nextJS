@@ -1,0 +1,71 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+  
+  .contactsContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+  }
+  
+  .location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+  }
+  
+  .contactsInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+    color: black;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .contactsSocial {
+    display: flex;
+    gap: 20px;
+  }
+  
+  iframe {
+    width: 250px;
+    height: 300px;
+  }
+  
+  @media (min-width: 481px) {
+    iframe {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    iframe {
+      width: 500px;
+      height: 400px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .contactsContent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    iframe {
+      width: 600px;
+      height: 400px;
+    }
+  }

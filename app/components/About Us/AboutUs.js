@@ -3,6 +3,7 @@ import paintBrush from "@/public/paintbrush.svg";
 import palette from "@/public/palette.svg";
 import brush from "@/public/brush.svg";
 import fillDrip from "@/public/fill-drip.svg";
+import styles from "@/app/components/About Us/aboutUs.css";
 
 export default function AboutUs() {
   const description = [

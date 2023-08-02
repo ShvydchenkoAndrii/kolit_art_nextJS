@@ -1,10 +1,10 @@
-import AboutUs from "./components/AboutUs";
-import Header from "./components/Header";
-import MasterClasses from "./components/MasterClasses";
-import Gallery from "./components/Gallery";
-import Contacts from "./components/Contacts";
-import Footer from "./components/Footer";
-import Naming from "./components/Naming";
+import AboutUs from "./components/About Us/AboutUs";
+import Header from "./components/Header/Header";
+import MasterClasses from "./components/MasterClasses/MasterClasses";
+import Gallery from "./components/Gallery/Gallery";
+import Contacts from "./components/Contacts/Contacts";
+import Footer from "./components/Footer/Footer";
+import Naming from "./components/Naming/Naming";
 
 export default function Page() {
   return (

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import fbLogo from "@/public/facebook_logo.png";
 import instaLogo from "@/public/instagram_logo.png";
+import styles from "@/app/components/Contacts/contacts.css";
 
 export default function Contacts() {
   return (

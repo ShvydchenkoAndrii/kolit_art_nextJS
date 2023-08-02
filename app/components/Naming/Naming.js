@@ -1,3 +1,5 @@
+import styles from "@/app/components/Naming/naming.css";
+
 export default function Naming() {
   return (
     <div className="naming">
