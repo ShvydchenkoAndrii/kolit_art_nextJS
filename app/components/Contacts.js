@@ -21,7 +21,7 @@ export default function Contacts() {
           <div className="location">
             <h3>Адреса</h3>
             <p>м.Львів, вул.Староєврейська, 50</p>
-            <p>Кав'ярня-музей "Тепилй п'єц"</p>
+            <p>Кав&apos;ярня-музей &quot;Тепилй п&apos;єц&quot;</p>
           </div>
           <div>
             <p>
