@@ -22,13 +22,37 @@ body {
   margin: auto;
 }
 
+h1 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 60px;
+  font-family: "Franklin", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+  color: rgb(247, 108, 7);
+}
+
+h2 {
+  font-size: 45px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-family: "Rubik Burned", cursive;
+  color: white;
+}
+
+/* ---------- Start of header CSS ---------- */
+
 .header {
+  width: 100%;
   background-color: rgb(247, 108, 7);
   display: grid;
   grid-template-columns: 1fr 3fr;
   justify-items: center;
   align-items: center;
   font-family: "Rubik Burned", cursive;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .headerLogo {
@@ -154,3 +178,193 @@ body {
     z-index: 10;
   }
 }
+
+/* ---------- End of header CSS ---------- */
+
+/* ---------- Start of Naming CSS ---------- */
+
+.naming {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.nameDescr {
+  margin-bottom: 100px;
+  font-size: 25px;
+  font-family: "Rubik Burned", cursive;
+  color: rgb(247, 108, 7);
+}
+
+/* ---------- End of Naming CSS ---------- */
+
+/* ---------- Start of AboutUs CSS ---------- */
+
+.descrImg {
+  width: 70px;
+}
+
+.aboutUs {
+  background-color: rgb(247, 108, 7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.aboutUsDescr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+
+.textDescr {
+  font-size: 24px;
+  color: white;
+}
+
+/* ---------- End of AboutUs CSS ---------- */
+
+/* ---------- Start of MasterClasses CSS ---------- */
+
+.mc-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.mc-item {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.mc-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mc-desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 23px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.1s;
+}
+
+.mc-item:hover .mc-desc {
+  visibility: visible;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+@media (min-width: 481px) {
+  .mc-desc {
+    visibility: inherit;
+  }
+}
+
+@media (min-width: 769px) {
+}
+
+@media (min-width: 1025px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/* ---------- End of MasterClasses CSS ---------- */
+
+/* ---------- Start of Contacts CSS ---------- */
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.contactsContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 10px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.contactsInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.contactsSocial {
+  display: flex;
+  gap: 20px;
+}
+
+iframe {
+  width: 250px;
+  height: 300px;
+}
+
+@media (min-width: 481px) {
+  iframe {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 769px) {
+  iframe {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contactsContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  iframe {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+/* ---------- End of Contacts CSS ---------- */

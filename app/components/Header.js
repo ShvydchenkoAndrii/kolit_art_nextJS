@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import logoIco from "@/public/kolir_art_logo.jpg";
+import logoIco from "@/public/kolir_art_logo_header.jpg";
 import fbLogo from "@/public/facebook_logo.png";
 import instaLogo from "@/public/instagram_logo.png";
 
@@ -27,6 +27,9 @@ export default function Header() {
       </div>
       <div>
         <div
+          onClick={() => {
+            changeShowBurger();
+          }}
           className={`${
             showBurgerMenu
               ? "showNavBarBurger active headerNavBar"
