@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import Image from "next/image";
 import logoIco from "@/public/kolir_art_logo_header.jpg";
 import fbLogo from "@/public/facebook_logo.png";
@@ -18,7 +19,6 @@ export default function Header() {
 
   const changeShowBurger = () => {
     setShowBurgerMenu(!showBurgerMenu);
-    console.log(showBurgerMenu);
   };
 
   return (
@@ -40,7 +40,19 @@ export default function Header() {
           {headerList.map((item, index) => {
             return (
               <div key={index}>
-                <a href={item.pagePart}>{item.name}</a>
+                <Link
+                  activeClass="active" // Клас, який буде додано до активного пункту меню
+                  to={item.pagePart} // ID або ім'я цільового компонента (яке знаходиться в назві розділу сторінки)
+                  spy={true} // Підсвічувати пункт меню під час скроллу
+                  smooth={true} // Плавний скролл
+                  duration={500} // Тривалість анімації (в мілісекундах)
+                  offset={-150} // Відступ, який компенсує висоту вашого фіксованого хедеру або інших елементів
+                  onClick={() => {
+                    changeShowBurger();
+                  }}
+                >
+                  {item.name}
+                </Link>
               </div>
             );
           })}

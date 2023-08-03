@@ -25,6 +25,10 @@ h2 {
   color: white;
 }
 
+a {
+  cursor: pointer;
+}
+
 @media (min-width: 481px) {
   h1 {
     font-size: 50px;
